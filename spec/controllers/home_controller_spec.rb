@@ -7,7 +7,7 @@ describe HomeController, type: :controller do
     it "should render home page" do
       get :index, format: :html
       expect(response).to be_successful
-      expect(response.body).to match /The Journal of Open Source Software/
+      expect(response.body).to match /NeuroLibre/
     end
   end
 
@@ -31,13 +31,14 @@ describe HomeController, type: :controller do
     end
   end
 
-  describe "GET #about" do
-    it "should render about page" do
-      get :about, format: :html
-      expect(response).to be_successful
-      expect(response.body).to match /Don't we have enough journals already?/
-    end
-  end
+  # Ignore until we write the about page
+  # describe "GET #about" do
+  #   it "should render about page" do
+  #     get :about, format: :html
+  #     expect(response).to be_successful
+  #     expect(response.body).to match /Don't we have enough journals already?/
+  #   end
+  # end
 
   describe "GET #profile" do
     it "should render profile page without 'update my profile banner'" do
